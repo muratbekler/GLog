@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ci-build:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: >
+      /bin/bash -c '
+        versionArg=$$([[ ! -z "$VERSION" ]] && echo "/p:PackageVersion=$VERSION" || echo "") &&
+        dotnet pack src/*/GLog.Extensions.Logging.csproj -c Release --no-build $$versionArg &&
+        dotnet nuget push src/**/GLog.Extensions.Logging.*.nupkg -s "$NUGET_SOURCE" -k "$NUGET_API_KEY"
+      '

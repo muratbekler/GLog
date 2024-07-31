@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33927.249
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D2DBBD0-2141-4B3D-BEA5-5FF4B15F0919}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.travis.yml = .travis.yml
+		docker-compose.ci.build.yml = docker-compose.ci.build.yml
+		docker-compose.ci.publish.yml = docker-compose.ci.publish.yml
+		docker-compose.yml = docker-compose.yml
+		icon.png = icon.png
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6D95AC6-FD7C-459C-ADBE-5797A0EDF123}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7999DEB6-1492-41CF-A94C-63606C616565}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Tests", "test\GLog.Extensions.Logging.Tests\GLog.Extensions.Logging.Tests.csproj", "{4B299C4A-3A24-47B3-83D1-251D5FBDA174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{7D9416E1-13A5-4A86-A3F1-2289369D7193}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Samples.NetCore2", "samples\GLog.Extensions.Logging.Samples.NetCore2\GLog.Extensions.Logging.Samples.NetCore2.csproj", "{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Samples.NetCore1", "samples\GLog.Extensions.Logging.Samples.NetCore1\GLog.Extensions.Logging.Samples.NetCore1.csproj", "{C55B368D-E4C1-42D0-97C2-4AD2F443743B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Samples.AspNetCore3", "samples\GLog.Extensions.Logging.Samples.AspNetCore3\GLog.Extensions.Logging.Samples.AspNetCore3.csproj", "{7599B625-DD65-4B68-ACF3-6E9400C0A99B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Samples.AspNetCore2", "samples\GLog.Extensions.Logging.Samples.AspNetCore2\GLog.Extensions.Logging.Samples.AspNetCore2.csproj", "{C3D38DAC-25E5-4590-A47D-08A97520C4CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging.Samples.AspNetCore5", "samples\GLog.Extensions.Logging.Samples.AspNetCore5\GLog.Extensions.Logging.Samples.AspNetCore5.csproj", "{5F202815-647E-488A-9B2C-A746775DBF6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GLog.Extensions.Logging", "src\GLog.Extensions.Logging\GLog.Extensions.Logging.csproj", "{B577FE76-96DA-4476-97AF-4086599C943A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B299C4A-3A24-47B3-83D1-251D5FBDA174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B299C4A-3A24-47B3-83D1-251D5FBDA174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B299C4A-3A24-47B3-83D1-251D5FBDA174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B299C4A-3A24-47B3-83D1-251D5FBDA174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55B368D-E4C1-42D0-97C2-4AD2F443743B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55B368D-E4C1-42D0-97C2-4AD2F443743B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55B368D-E4C1-42D0-97C2-4AD2F443743B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55B368D-E4C1-42D0-97C2-4AD2F443743B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7599B625-DD65-4B68-ACF3-6E9400C0A99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7599B625-DD65-4B68-ACF3-6E9400C0A99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7599B625-DD65-4B68-ACF3-6E9400C0A99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7599B625-DD65-4B68-ACF3-6E9400C0A99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D38DAC-25E5-4590-A47D-08A97520C4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D38DAC-25E5-4590-A47D-08A97520C4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D38DAC-25E5-4590-A47D-08A97520C4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D38DAC-25E5-4590-A47D-08A97520C4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F202815-647E-488A-9B2C-A746775DBF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F202815-647E-488A-9B2C-A746775DBF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F202815-647E-488A-9B2C-A746775DBF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F202815-647E-488A-9B2C-A746775DBF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B577FE76-96DA-4476-97AF-4086599C943A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B577FE76-96DA-4476-97AF-4086599C943A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B577FE76-96DA-4476-97AF-4086599C943A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B577FE76-96DA-4476-97AF-4086599C943A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B299C4A-3A24-47B3-83D1-251D5FBDA174} = {7999DEB6-1492-41CF-A94C-63606C616565}
+		{0A2D1AF3-16F9-4081-A3BE-35331BEF58B5} = {7D9416E1-13A5-4A86-A3F1-2289369D7193}
+		{C55B368D-E4C1-42D0-97C2-4AD2F443743B} = {7D9416E1-13A5-4A86-A3F1-2289369D7193}
+		{7599B625-DD65-4B68-ACF3-6E9400C0A99B} = {7D9416E1-13A5-4A86-A3F1-2289369D7193}
+		{C3D38DAC-25E5-4590-A47D-08A97520C4CB} = {7D9416E1-13A5-4A86-A3F1-2289369D7193}
+		{5F202815-647E-488A-9B2C-A746775DBF6B} = {7D9416E1-13A5-4A86-A3F1-2289369D7193}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D74A71-1746-4865-AAE2-77625B3E8935}
+	EndGlobalSection
+EndGlobal
