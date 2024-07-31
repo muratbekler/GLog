@@ -1,0 +1,17 @@
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.deps.json
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.runtimeconfig.json
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.runtimeconfig.dev.json
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.dll
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.pdb
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.dll
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\bin\Debug\netcoreapp2.1\GLog.Extensions.Logging.pdb
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.csproj.AssemblyReference.cache
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.AssemblyInfoInputs.cache
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.AssemblyInfo.cs
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.csproj.CoreCompileInputs.cache
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Ext.00C79D69.Up2Date
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.dll
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.pdb
+C:\Users\murat.bekler\Desktop\GLog-main\samples\GLog.Extensions.Logging.Samples.NetCore2\obj\Debug\netcoreapp2.1\GLog.Extensions.Logging.Samples.NetCore2.genruntimeconfig.cache

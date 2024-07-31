@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "HkTPehqJmhY=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\murat.bekler\\Desktop\\GLog-main\\samples\\GLog.Extensions.Logging.Samples.NetCore1\\GLog.Extensions.Logging.Samples.NetCore1.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project GLog.Extensions.Logging is not compatible with netcoreapp1.1 (.NETCoreApp,Version=v1.1). Project GLog.Extensions.Logging supports: netstandard2.0 (.NETStandard,Version=v2.0)",
+      "libraryId": "GLog.Extensions.Logging",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v1.1"
+      ]
+    }
+  ]
+}
