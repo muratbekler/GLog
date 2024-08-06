@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "GLog.Extensions.Logging/0.1.2": {
+      "GLog.Extensions.Logging/0.1.3": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "6.0.0",
           "Microsoft.Extensions.Logging.Configuration": "2.1.1",
@@ -281,7 +281,7 @@
     }
   },
   "libraries": {
-    "GLog.Extensions.Logging/0.1.2": {
+    "GLog.Extensions.Logging/0.1.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

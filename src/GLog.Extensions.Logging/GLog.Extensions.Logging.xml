@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GLog.Extensions.Logging</name>
+    </assembly>
+    <members>
+        <member name="P:GLog.Extensions.Logging.GLogContext.LoggerName">
+            <summary>
+                The logger name.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLogContext.LogLevel">
+            <summary>
+                The logging level.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLogContext.EventId">
+            <summary>
+                The event ID.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLogContext.Exception">
+            <summary>
+                The exception, if any.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.IncludeScopes">
+            <summary>
+                Enable/disable additional fields added via log scopes.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.Protocol">
+            <summary>
+                Protocol used to send logs.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.Host">
+            <summary>
+                GLog server host.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.Port">
+            <summary>
+                GLog server port.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.LogSource">
+            <summary>
+                Log source name mapped to the GLog host field (required).
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.CompressUdp">
+            <summary>
+                Enable GZip message compression for UDP logging.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.UdpCompressionThreshold">
+            <summary>
+                The UDP message size in bytes under which messages will not be compressed.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.UdpMaxChunkSize">
+            <summary>
+                The UDP message max size in bytes to be sent in one datagram.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.AdditionalFields">
+            <summary>
+                Additional fields that will be attached to all log messages.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.AdditionalFieldsFactory">
+            <summary>
+                Additional fields computed based on raw log data.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.HttpHeaders">
+            <summary>
+                Headers used when sending logs via HTTP(S).
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.HttpTimeout">
+            <summary>
+                Timeout used when sending logs via HTTP(S).
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.IncludeMessageTemplates">
+            <summary>
+                Include a field with the original message template before structured log parameters are replaced.
+            </summary>
+        </member>
+        <member name="P:GLog.Extensions.Logging.GLoggerOptions.IncludeDefaultFields">
+            <summary>
+                Include default fields (logger, exception, event_id, event_name).
+            </summary>
+        </member>
+        <member name="M:GLog.Extensions.Logging.LoggerFactoryExtensions.AddGLog(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptionsMonitor{GLog.Extensions.Logging.GLoggerOptions})">
+            <summary>
+                Adds a <see cref="T:GLog.Extensions.Logging.GLoggerProvider" /> to the logger factory with the supplied
+                <see cref="T:GLog.Extensions.Logging.GLoggerOptions" />.
+            </summary>
+            <param name="loggerFactory"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GLog.Extensions.Logging.LoggerFactoryExtensions.AddGLog(Microsoft.Extensions.Logging.ILoggerFactory,GLog.Extensions.Logging.GLoggerOptions)">
+            <summary>
+                Adds a <see cref="T:GLog.Extensions.Logging.GLoggerProvider" /> to the logger factory with the supplied
+                <see cref="T:GLog.Extensions.Logging.GLoggerOptions" />.
+            </summary>
+            <param name="loggerFactory"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GLog.Extensions.Logging.LoggingBuilderExtensions.AddGLog(Microsoft.Extensions.Logging.ILoggingBuilder)">
+            <summary>
+                Registers a <see cref="T:GLog.Extensions.Logging.GLoggerProvider" /> with the service collection.
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GLog.Extensions.Logging.LoggingBuilderExtensions.AddGLog(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{GLog.Extensions.Logging.GLoggerOptions})">
+            <summary>
+                Registers a <see cref="T:GLog.Extensions.Logging.GLoggerProvider" /> with the service collection allowing logger options
+                to be customised.
+            </summary>
+            <param name="builder"></param>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
