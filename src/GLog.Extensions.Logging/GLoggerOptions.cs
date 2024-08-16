@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RabbitMQ.Client;
+using System;
 using System.Collections.Generic;
-using Microsoft.Extensions.Logging;
 
 namespace GLog.Extensions.Logging
 {
@@ -75,5 +75,9 @@ namespace GLog.Extensions.Logging
         ///     Include default fields (logger, exception, event_id, event_name).
         /// </summary>
         public bool IncludeDefaultFields { get; set; } = true;
+
+        public string Exchange { get; set; } = "logs";
+        public string ExchangeType { get; set; } = RabbitMQ.Client.ExchangeType.Fanout;
+        public string RoutingKey { get; set; } = "";
     }
 }

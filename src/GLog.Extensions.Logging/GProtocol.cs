@@ -5,6 +5,7 @@
         Udp,
         Tcp,
         Http,
-        Https
+        Https,
+        RabbitMQ
     }
 }

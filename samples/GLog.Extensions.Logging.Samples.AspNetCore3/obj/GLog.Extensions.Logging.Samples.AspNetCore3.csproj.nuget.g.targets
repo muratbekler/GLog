@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.threading.channels\7.0.0\buildTransitive\netcoreapp2.0\System.Threading.Channels.targets" Condition="Exists('$(NuGetPackageRoot)system.threading.channels\7.0.0\buildTransitive\netcoreapp2.0\System.Threading.Channels.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.runtime.compilerservices.unsafe\6.0.0\buildTransitive\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.targets" Condition="Exists('$(NuGetPackageRoot)system.runtime.compilerservices.unsafe\6.0.0\buildTransitive\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.diagnostics.diagnosticsource\6.0.0\buildTransitive\netcoreapp2.0\System.Diagnostics.DiagnosticSource.targets" Condition="Exists('$(NuGetPackageRoot)system.diagnostics.diagnosticsource\6.0.0\buildTransitive\netcoreapp2.0\System.Diagnostics.DiagnosticSource.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.primitives\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Primitives.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.primitives\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Primitives.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.dependencyinjection.abstractions\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.dependencyinjection.abstractions\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\6.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets')" />
+  </ImportGroup>
+</Project>

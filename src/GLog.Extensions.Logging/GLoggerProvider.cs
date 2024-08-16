@@ -83,6 +83,7 @@ namespace GLog.Extensions.Logging
             return options.Protocol switch
             {
                 GProtocol.Udp => new UdpGLogClient(options),
+                GProtocol.RabbitMQ => new RabbitMQLogClient(options),
                 GProtocol.Tcp => new TcpGLogClient(options),
                 GProtocol.Http => new HttpGLogClient(options),
                 GProtocol.Https => new HttpGLogClient(options),
