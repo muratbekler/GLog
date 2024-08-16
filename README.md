@@ -57,6 +57,33 @@ Logger options are taken from the "GLog" provider section in `appsettings.json` 
 }
 ```
 
+```json5
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information"
+    },
+    "GLog": {
+      "Host": "localhost",
+      "Port": 5672,                 // Not required if using default 5672.
+      "Protocol": "RabbitMQ",       // Not required if using default RabbitMQ.
+	  "Exchange": "log-messages",
+      "ExchangeType": "fanout",
+      "RoutingKey": null,
+      "LogSource": "My.App.Name",    // Not required if set in code as above.
+      "AdditionalFields": {          // Optional fields added to all logs.
+        "foo": "bar",
+		"protocol": "AMQP"
+      },
+      "LogLevel": {
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information"
+      }
+    }
+  }
+}
+```
+
 For a full list of options e.g. UDP/TCP/HTTP(S) settings, see [`GLogLoggerOptions`](src/GLog.Extensions.Logging/GLogLoggerOptions.cs). See the [samples](/samples) directory full examples. For more information on providers and logging in general, see the aspnetcore [logging documentation](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging).
 
 ### Auto Reloading Config
