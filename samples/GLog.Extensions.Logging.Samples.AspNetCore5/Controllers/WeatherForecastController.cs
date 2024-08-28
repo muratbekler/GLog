@@ -25,7 +25,7 @@ namespace GLog.Extensions.Logging.Samples.AspNetCore5.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             _logger.LogInformation("Getting weather at {weather_time}", DateTime.Now);
-            _logger.LogDebug("A debug level log");
+            _logger.LogTrace("A debug level log");
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

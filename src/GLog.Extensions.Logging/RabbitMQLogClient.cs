@@ -1,10 +1,14 @@
-﻿using RabbitMQ.Client;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Text;
+using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GLog.Extensions.Logging
@@ -23,33 +27,61 @@ namespace GLog.Extensions.Logging
         private readonly Random _random;
 
         // RabbitMQ bağlantı nesneleri
-        private readonly IConnection? _connection;
-        private readonly IModel? _channel;
+        private IConnection? _connection;
+        private IModel? _channel;
 
         public RabbitMQLogClient(GLoggerOptions options)
         {
             _options = options;
             _maxMessageBodySize = options.UdpMaxChunkSize - MessageHeaderSize;
+            _random = new Random();
+            _ = Init();
+        }
 
-            var factory = new ConnectionFactory() { HostName = _options.Host, Port  = _options.Port };
-
+        private async Task<bool> Init()
+        {
             try
             {
+                var factory = new ConnectionFactory() { HostName = _options.Host, Port = _options.Port };
                 _connection = factory.CreateConnection();
                 _channel = _connection.CreateModel();
 
                 _channel.ExchangeDeclare(exchange: _options.Exchange, type: _options.ExchangeType); // Exchange ve tipini ayarlayın
 
+                await TempMessageSendAsync();
+
+                return true;
             }
             catch
             {
+                return false;
             }
-            _random = new Random();
         }
 
         public async Task SendMessageAsync(GMessage message)
         {
-            var messageBytes = Encoding.UTF8.GetBytes(message.ToJson());
+
+            if (_channel == null || _channel?.IsClosed == true)
+            {
+                if (!File.Exists(_options.LogPathSource))
+                {
+                    File.Create(_options.LogPathSource).Dispose();
+                }
+                File.AppendAllText(_options.LogPathSource, message.ToJson() + Environment.NewLine);
+
+                await Init();
+                return;
+            }
+            else
+            {
+                await TempMessageSendAsync();
+                await SendRabbitMQMessageAsync(message);
+            }
+        }
+
+        private async Task SendRabbitMQMessageAsync(GMessage message)
+        {
+            byte[] messageBytes = Encoding.UTF8.GetBytes(message.ToJson());
 
             if (_options.CompressUdp && messageBytes.Length > _options.UdpCompressionThreshold)
             {
@@ -58,7 +90,6 @@ namespace GLog.Extensions.Logging
 
             foreach (var messageChunk in ChunkMessage(messageBytes))
             {
-                // RabbitMQ'ya mesaj gönderme
                 _channel.BasicPublish(exchange: _options.Exchange,
                                       routingKey: _options.RoutingKey,
                                       basicProperties: null,
@@ -125,6 +156,50 @@ namespace GLog.Extensions.Logging
             header[11] = Convert.ToByte(sequenceCount);
 
             return header;
+        }
+
+        private async Task TempMessageSendAsync()
+        {
+            List<GMessage> logs = ReadLogs();
+            for (int i = logs.Count - 1; i >= 0; i--)
+            {
+                var log = logs[i];
+                await SendRabbitMQMessageAsync(log);
+                DeleteLog(i);
+            }
+        }
+
+        public List<GMessage> ReadLogs()
+        {
+            var logs = new List<GMessage>();
+
+            if (File.Exists(_options.LogPathSource))
+            {
+                var lines = File.ReadAllLines(_options.LogPathSource);
+                foreach (var line in lines)
+                {
+                    var logEntry = JsonSerializer.Deserialize<GMessage>(line);
+                    logs.Add(logEntry);
+                }
+            }
+            return logs;
+        }
+
+        public void DeleteLog(int index)
+        {
+            var logs = ReadLogs();
+
+            if (index >= 0 && index < logs.Count)
+            {
+                logs.RemoveAt(index);
+                File.WriteAllText(_options.LogPathSource, "");
+
+                foreach (var log in logs)
+                {
+                    string jsonLog = JsonSerializer.Serialize(log);
+                    File.AppendAllText(_options.LogPathSource, jsonLog + Environment.NewLine);
+                }
+            }
         }
 
         public void Dispose()

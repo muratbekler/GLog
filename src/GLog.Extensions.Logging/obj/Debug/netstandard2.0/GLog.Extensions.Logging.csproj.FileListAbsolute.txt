@@ -1,0 +1,11 @@
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\bin\Debug\netstandard2.0\GLog.Extensions.Logging.deps.json
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\bin\Debug\netstandard2.0\GLog.Extensions.Logging.dll
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\bin\Debug\netstandard2.0\GLog.Extensions.Logging.pdb
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.csproj.AssemblyReference.cache
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.AssemblyInfoInputs.cache
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.AssemblyInfo.cs
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.csproj.CoreCompileInputs.cache
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.sourcelink.json
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.dll
+C:\Users\murat.bekler\Desktop\GLog-main\src\GLog.Extensions.Logging\obj\Debug\netstandard2.0\GLog.Extensions.Logging.pdb

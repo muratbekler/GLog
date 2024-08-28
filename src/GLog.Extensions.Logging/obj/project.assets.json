@@ -1230,13 +1230,13 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.1.4",
+    "version": "0.1.5",
     "restore": {
-      "projectUniqueName": "C:\\Users\\murat.bekler\\Desktop\\GLog-main\\src\\GLog.Extensions.Logging\\GLog.Extensions.Logging.csproj",
+      "projectUniqueName": "C:\\Repos\\graylog.extensions\\src\\GLog.Extensions.Logging\\GLog.Extensions.Logging.csproj",
       "projectName": "GLog.Extensions.Logging",
-      "projectPath": "C:\\Users\\murat.bekler\\Desktop\\GLog-main\\src\\GLog.Extensions.Logging\\GLog.Extensions.Logging.csproj",
+      "projectPath": "C:\\Repos\\graylog.extensions\\src\\GLog.Extensions.Logging\\GLog.Extensions.Logging.csproj",
       "packagesPath": "C:\\Users\\murat.bekler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\murat.bekler\\Desktop\\GLog-main\\src\\GLog.Extensions.Logging\\obj\\",
+      "outputPath": "C:\\Repos\\graylog.extensions\\src\\GLog.Extensions.Logging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -30,6 +30,7 @@ namespace GLog.Extensions.Logging
         ///     Log source name mapped to the GLog host field (required).
         /// </summary>
         public string? LogSource { get; set; }
+        public string? LogPathSource { get; set; } = "glog.txt";
 
         /// <summary>
         ///     Enable GZip message compression for UDP logging.
