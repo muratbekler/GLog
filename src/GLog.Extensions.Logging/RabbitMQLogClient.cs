@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,15 +6,12 @@ using System.IO;
 using System.IO.Compression;
 using System.Text;
 using System.Text.Json;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace GLog.Extensions.Logging
 {
     public class RabbitMQLogClient : IGLogClient
     {
-        private const string LogSecret = "bG9nLmtvZG1hdGlrLmNvbQ==";
-        private const string LogSecretKey = "MTIyMDE=";
         private const int MaxChunks = 128;
         private const int MessageHeaderSize = 12;
         private const int MessageIdSize = 8;
